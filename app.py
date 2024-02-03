@@ -11,7 +11,7 @@ commit_message = "Fake commit message"
 # os.chdir("commit-generator")
 
 # Tambahkan perubahan ke file atau buat file baru
-with open("note.txt", "w") as file:
+with open("note.txt", "a+") as file:
     file.write("This is a fake file.")
 
 # Lakukan commit
