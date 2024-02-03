@@ -1,4 +1,5 @@
 import os
+import random
 import subprocess
 
 # Ganti dengan informasi repositori Anda
@@ -10,13 +11,16 @@ commit_message = "Fake commit message"
 # os.system(f"git clone {repository_url}")
 # os.chdir("commit-generator")
 
+jumlah_perulangan = random.randint(5, 10)
+
+for _ in range(jumlah_perulangan):
 # Tambahkan perubahan ke file atau buat file baru
-with open("note.txt", "a+") as file:
-    file.write("This is a fake file.")
+  with open("note.txt", "a+") as file:
+      file.write("This is a fake file.")
 
-# Lakukan commit
-os.system("git add .")
-os.system(f'git commit  -m "{commit_message}"')
+  # Lakukan commit
+  os.system("git add .")
+  os.system(f'git commit  -m "{commit_message}"')
 
-# Push perubahan ke repositori
-os.system("git push -u origin main")
+  # Push perubahan ke repositori
+  os.system("git push -u origin main")
