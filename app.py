@@ -11,7 +11,7 @@ commit_message = "Fake commit message"
 # os.system(f"git clone {repository_url}")
 # os.chdir("commit-generator")
 
-jumlah_perulangan = random.randint(3, 7)
+jumlah_perulangan = random.randint(7, 10)
 
 for _ in range(jumlah_perulangan):
 # Tambahkan perubahan ke file atau buat file baru
@@ -22,5 +22,5 @@ for _ in range(jumlah_perulangan):
   os.system("git add .")
   os.system(f'git commit  -m "{commit_message}"')
 
-  # Push perubahan ke repositori
-  os.system("git push -u origin main")
+# Push perubahan ke repositori
+os.system("git push -u origin main")
